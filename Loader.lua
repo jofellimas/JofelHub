@@ -8,7 +8,7 @@ local function notificar(titulo, texto)
     })
 end
 
-if gameId == 142823291 or gameId == 142823291 then
+if gameId == 142823291 then
     notificar("JofelHub", "Carregando MM2...")
     loadstring(game:HttpGet("https://raw.githubusercontent.com/jofellimas/JofelHub/refs/heads/main/scripts/MM2.lua"))()
 
