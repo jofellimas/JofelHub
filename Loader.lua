@@ -10,11 +10,11 @@ end
 
 if gameId == 142823291 or gameId == 142823291 then
     notificar("JofelHub", "Carregando MM2...")
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/scripts/MM2.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/jofellimas/JofelHub/refs/heads/main/scripts/MM2.lua"))()
 
 elseif gameId == 606849621 then
     notificar("JofelHub", "Carregando Jailbreak...")
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/scripts/Jailbreak.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/jofellimas/JofelHub/refs/heads/main/scripts/Jailbreak.lua"))()
 
 else
     notificar("JofelHub", "Jogo não suportado!")
