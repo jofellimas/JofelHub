@@ -271,7 +271,7 @@ local function atualizarJogador(jogadorAlvo)
         gui.Name = "NomeInimigoGui"
         gui.Adornee = cabeca
         gui.Size = UDim2.new(0, 100, 0, 40)
-        gui.StudsOffset = Vector3.new(0, 2, 0)
+        gui.StudsOffset = Vector3.new(0, 10, 0)
         gui.AlwaysOnTop = true
         gui.Enabled = false 
         
