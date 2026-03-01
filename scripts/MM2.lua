@@ -307,13 +307,19 @@ Workspace.DescendantAdded:Connect(function(objeto)
 end)
 
 -- Loop do Aimbot
+-- Loop do Aimbot
 RunService.RenderStepped:Connect(function()
+    -- Verifica se o Aimbot está ativado, se o jogador tem um personagem e se tem um papel definido
     if not CONFIG.AimbotAtivado or not minhaArmaEquipada or not jogadorLocal.Character then return end
 
-    local usandoShiftLock = (UserInputService.MouseBehavior == Enum.MouseBehavior.LockCenter)
+    -- 1. Verifica se está segurando o botão direito do mouse
     local segurandoBotaoDireito = UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2)
 
-    if not (usandoShiftLock or segurandoBotaoDireito) then return end
+    -- 2. Verifica se tem alguma ferramenta (arma/faca) equipada NA MÃO (dentro do Character)
+    local algoEquipadoNaMao = jogadorLocal.Character:FindFirstChildOfClass("Tool")
+
+    -- Se NÃO estiver segurando o botão direito OU NÃO tiver nada na mão, não faz nada
+    if not segurandoBotaoDireito or not algoEquipadoNaMao then return end
 
     local armaDoInimigo = (minhaArmaEquipada == "Knife") and "Gun" or "Knife"
     local alvoMaisProximo = nil
